@@ -7,7 +7,8 @@
     <title>Recruiter Platform // System Console</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+    <!-- Swapped to jsdelivr CDN to fix the loading error -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.js"></script>
     <style>
          :root {
             --bg: #09090b;
@@ -471,7 +472,7 @@
         <div class="terminal">
             <div class="terminal-header">
                 <span>System_Logs</span>
-                <span>v1.0.4</span>
+                <span>v1.0.5</span>
             </div>
             <div id="log-container"></div>
         </div>
@@ -538,7 +539,7 @@
                 data: {
                     labels: history.labels,
                     datasets: [{
-                        label: 'Total Requests', // Required for tooltips to not crash
+                        label: 'Total Requests',
                         data: history.requests,
                         borderColor: '#00e5ff',
                         backgroundColor: 'rgba(0, 229, 255, 0.1)',
